@@ -6,10 +6,10 @@ const studentRoutes = require('./routes/students');
 
 const app = express();
 
-// Utiliser CORS pour autoriser les requêtes cross-origin
+//  CORS pour autoriser les requêtes cross-origin
 app.use(cors()); // Ceci permet à toutes les origines d'accéder à l'API
 
-// Utiliser bodyParser pour parser les JSON dans les requêtes
+//  bodyParser pour parser les JSON dans les requêtes
 app.use(bodyParser.json());
 
 // Routes pour les classrooms et les students
