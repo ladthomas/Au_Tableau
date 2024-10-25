@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Classes</title>
+   <!-- <link rel="stylesheet" href="styles.css"> -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
+   <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"> -->
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">AU TABLEAU</h1>
+
+            <!-- Formulaire pour ajouter une nouvelle classe -->
+            <div class="field">
+                <label class="label">Ajouter une nouvelle classe</label>
+                <div class="control">
+                    <input id="className" class="input" type="text" placeholder="Nom de la classe">
+                </div>
+                <button id="addClassBtn" class="button is-primary">Ajouter Classe</button>
+                <button id="resetClassInputBtn" class="button is-light">Réinitialiser</button>
+            </div>
+
+            <!-- Liste des classes avec boutons de modification et suppression -->
+            <h2 class="subtitle">Liste des classes</h2>
+            <ul id="classList" class="list"></ul>
+
+            <!-- Gestion des étudiants dans une classe -->
+            <h2 class="subtitle">Étudiants dans la classe : <span id="currentClassName"></span></h2>
+            <div class="field">
+                <label class="label">Ajouter un étudiant</label>
+                <div class="control">
+                    <input id="studentName" class="input" type="text" placeholder="Nom de l'étudiant">
+                </div>
+                <button id="addStudentBtn" class="button is-primary">Ajouter Étudiant</button>
+                <button id="resetStudentInputBtn" class="button is-light">Réinitialiser</button>
+            </div>
+
+            <!-- Liste des étudiants avec boutons de modification et suppression -->
+            <h2 class="subtitle">Liste des étudiants</h2>
+            <ul id="studentList" class="list"></ul>
+
+            <!-- Bouton pour appeler un étudiant aléatoirement -->
+            <div class="buttons">
+                <button id="randomStudentBtn" class="button is-info">Appeler un étudiant au hasard</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
