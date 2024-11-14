@@ -11,7 +11,7 @@ const randomStudentBtn = document.getElementById('randomStudentBtn');
 let currentClassId = null; // ID de la classe sélectionnée
 let currentStudentId = null; // ID de l'étudiant sélectionné
 
-// récupérer et afficher toutes les classes avec boutons
+// récupérer et afficher toutes les classes
 function getClasses() {
     fetch('http://localhost:3000/api/classrooms')
         .then(response => response.json())
@@ -68,7 +68,7 @@ function selectClass(classId, className) {
     getStudents(classId);
 }
 
-// récupérer et afficher tous les étudiants d'une classe avec boutons
+// récupérer et afficher tous les étudiants
 function getStudents(classId) {
     fetch(`http://localhost:3000/api/classrooms/${classId}/students`)
         .then(response => response.json())
@@ -207,7 +207,7 @@ function deleteStudent(studentId) {
     .catch(err => console.error('Erreur lors de la suppression de l\'étudiant:', err));
 }
 
-// Ajouter les événements aux boutons
+// Ajouter les événements 
 addClassBtn.addEventListener('click', addClass);
 resetClassInputBtn.addEventListener('click', () => classNameInput.value = '');
 addStudentBtn.addEventListener('click', addStudent);
